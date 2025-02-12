@@ -162,8 +162,13 @@ a{
     font-family: 'Spicy Rice', cursive,sans-serif;
     font-size: 50px;
     color: var(--section_heading_color);
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
+
+.first_half_ab, .second_half_ab{
+    margin-top: 60px;
+}
+
 
 .first_half_ab h5{
     font-family: 'Spicy Rice', cursive,sans-serif;
