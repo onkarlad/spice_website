@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBK MASALE</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="icon" type="image/png" href="./images/start_image.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="home">
+        <div class="container">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                onclick="toggleIcon(this)">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="./index.html"
+                            onclick="setActive(this); closeNavbar()">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html#about_section"
+                            onclick="setActive(this); closeNavbar()">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html#product_section"
+                            onclick="setActive(this); closeNavbar()">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#recipe_section"
+                            onclick="setActive(this); closeNavbar()">Recipes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html#faq_section"
+                            onclick="setActive(this); closeNavbar()">Faq's</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html#contact_section"
+                            onclick="setActive(this); closeNavbar()">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link contact_btn" href="#"><span><i
+                                    class="fa-solid fa-phone"></i>&nbsp;</span>8888371472</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- RECIPEE SECTION START -->
+    <div class="container recipe_section ">
+        <h2 class="section-title">Delicious Recipes</h2>
+        <p class="col-12 text-center fw-bold fst-italic"><i class="fa-solid fa-quote-left"></i> Savor the Spice, Taste the Magic! &nbsp;<i class="fa-solid fa-quote-right"></i>
+        </p>
+        <div class="start_image text-center col-12"><img src="./images/start_image.png" alt="star" loading="lazy"></div>
+    
+        <!-- Recipe Tabs -->
+        <ul class="nav nav-tabs mt-4" id="recipeTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="recipe1-tab" data-bs-toggle="tab" data-bs-target="#recipe1" type="button" role="tab">
+                    Crab Curry
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="recipe2-tab" data-bs-toggle="tab" data-bs-target="#recipe2" type="button" role="tab">
+                    Malvani Chicken
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="recipe3-tab" data-bs-toggle="tab" data-bs-target="#recipe3" type="button" role="tab">
+                    Mutton Rassa
+                </button>
+            </li>
+        </ul>
+    
+        <!-- Recipe Content -->
+        <div class="tab-content" id="recipeTabsContent">
+            <!-- Recipe 1 -->
+            <div class="tab-pane fade show active" id="recipe1" role="tabpanel">
+                <div class="recipe-media"> 
+                    <img src="./images/crabcurry.webp"alt="Crab Curry" class="recipe-img curry_img img-fluid">
+
+                        <video controls  class="curry_video rounded-3 lazy-video curry_video_tag" poster="./images/crabcurry2.jpeg" loading="lazy" >
+                            <source src="./videos/crabcurryvideo.mp4" type="video/mp4">
+                        </video>
+                    
+                </div>
+                <!-- <h4 class="text-center mt-5">Crab Curry</h4> -->
+                <div class="ingredients mt-5 ">
+                    <h5 class="recipe_head"><strong>Ingredients:</strong></h5>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <ul>
+                                <li>2 medium-sized crabs (cleaned and cut into pieces)</li>
+                                <li>2 medium onions (finely chopped)</li> 
+                                <li>2 medium tomatoes (finely chopped)</li> 
+                                <li>1 tablespoon ginger-garlic paste</li> 
+                                <li>1-2 green chilies (slit)</li> 
+                                <li>1 teaspoon turmeric powder</li> 
+                                <li>1 tablespoon red chili powder (adjust to taste)</li> 
+                            </ul>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <ul>
+                                <li>1 tablespoon coriander powder</li> 
+                                <li>1 teaspoon cumin powder</li> 
+                                <li>1 teaspoon garam masala</li> 
+                                <li>1 cup coconut milk (or 1/2 cup grated coconut blended with water)</li> 
+                                <li>2 tablespoons cooking oil</li> 
+                                <li>Salt to taste</li> 
+                                <li>Fresh coriander leaves (for garnish)</li> 
+                            </ul>
+                        </div>
+
+                    </div>
+                    <ul>
+                        <li><strong>For Tempering (Optional):</strong></li> 
+                        <li>1 teaspoon mustard seeds</li> 
+                        <li>1 teaspoon cumin seeds</li> 
+                        <li>2-3 dried red chilies</li> 
+                        <li>A few curry leaves</li> 
+                    </ul>
+                </div>
+                <div class="steps mt-4">
+                    <h5 class="recipe_head"><strong>How to Prepare:</strong></h5>
+                    <ol>
+                    <li><strong>Prepare the Crab:</strong> Clean the crab thoroughly, removing the gills and any dirt. Cut it into pieces and wash again. Set aside.</li>
+                    <li><strong>Marinate the Crab:</strong> In a bowl, mix the crab pieces with 1/2 teaspoon turmeric powder and a pinch of salt. Let it marinate for 15-20 minutes.</li> 
+                    <li><strong>Cook the Crab:</strong> Heat 1 tablespoon oil in a pan. Add the marinated crab pieces and sauté for 3-4 minutes until they turn slightly red. Remove and set aside.</li> 
+                    <li><strong>Prepare the Curry Base:</strong> In the same pan, add the remaining oil. If using tempering, add mustard seeds, cumin seeds, dried red chilies, and curry leaves. Let them splutter. Add the chopped onions and sauté until golden brown. Add the ginger-garlic paste and green chilies. Sauté for 2 minutes until the raw smell disappears.</li> 
+                    <li><strong>Add Spices:</strong> Add turmeric powder, red chili powder, coriander powder, and cumin powder. Mix well and cook for 1-2 minutes. Add the chopped tomatoes and cook until they turn soft and the oil separates from the mixture.</li> 
+                    <li><strong>Combine Crab and Curry:</strong> Add the sautéed crab pieces to the curry base. Mix well so the crab is coated with the spices. Add 1 cup of water (adjust as needed) and bring to a boil. Simmer for 10-12 minutes until the crab is fully cooked.</li> 
+                    <li><strong>Add Coconut Milk:</strong> Pour in the coconut milk and stir well. Let it simmer for another 5 minutes. Add garam masala and adjust salt if needed.</li> 
+                    <li><strong>Garnish and Serve:</strong> Garnish with fresh coriander leaves. Serve hot with steamed rice, roti, or naan.</li> </ol>
+                </div>
+
+            </div>
+    
+            <!-- Recipe 2 -->
+            <div class="tab-pane fade" id="recipe2" role="tabpanel">
+                <div class="recipe-media"> 
+                    <img src="./images/malvani_chicken.webp"alt="malvani chicken" class="recipe-img curry_img img-fluid">
+
+                        <video controls  class="curry_video rounded-3 lazy-video chicken_video_tag" poster="./images/malvani_chicken_poster.png" loading="lazy">
+                            <!-- <source src="./videos/malvani_chicken.mp4" type="video/mp4"> -->
+                        </video>
+                    
+                </div>
+                <!-- <h4 class="text-center mt-5">Crab Curry</h4> -->
+                <div class="ingredients mt-5 ">
+                    <h5 class="recipe_head"><strong>Ingredients:</strong></h5>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <ul>
+                                <li>500 grams chicken (with bones, cut into pieces)</li> 
+                                <li>2 medium onions (finely chopped)</li> 
+                                <li>2 medium tomatoes (finely chopped)</li> 
+                                <li>1 tablespoon ginger-garlic paste</li> 
+                                <li>2-3 green chilies (slit)</li> 
+                                <li>1/2 cup grated coconut (fresh or dried)</li> 
+                                <li>1 tablespoon Malvani masala (or use a mix of 1 tsp red chili powder, 1/2 tsp coriander powder, 1/2 tsp cumin powder, 1/4 tsp turmeric powder, and 1/4 tsp garam masala)</li> 
+                                <li>1 teaspoon turmeric powder</li> 
+                                <li>1 teaspoon red chili powder (adjust to taste)</li> 
+                                <li>1 teaspoon coriander seeds</li> 
+                                
+                            </ul>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <ul>
+                                <li>1 teaspoon cumin seeds</li> 
+                                <li>4-5 black peppercorns</li> 
+                                <li>2-3 cloves</li> 
+                                <li>1-inch cinnamon stick</li> 
+                                <li>2-3 dried red chilies</li> 
+                                <li>1/2 teaspoon mustard seeds</li> 
+                                <li>1/2 teaspoon fenugreek seeds (optional)</li> 
+                                <li>A few curry leaves</li> 
+                                <li>2 tablespoons cooking oil</li> 
+                                <li>Salt to taste</li> 
+                                <li>Fresh coriander leaves (for garnish)</li> 
+                            </ul>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                <div class="steps mt-4">
+                    <h5 class="recipe_head"><strong>How to Prepare:</strong></h5>
+                    <ol> <li><strong>Prepare the Malvani Masala:</strong> Dry roast coriander seeds, cumin seeds, black peppercorns, cloves, cinnamon, and dried red chilies in a pan until fragrant. Let it cool, then grind into a fine powder. Mix with grated coconut and a little water to form a smooth paste. Set aside.</li> <li><strong>Marinate the Chicken:</strong> In a bowl, mix the chicken pieces with turmeric powder, red chili powder, and salt. Let it marinate for 20-30 minutes.</li> <li><strong>Cook the Chicken:</strong> Heat oil in a pan. Add mustard seeds and fenugreek seeds (if using). Let them splutter. Add curry leaves and chopped onions. Sauté until the onions turn golden brown.</li> <li><strong>Add Ginger-Garlic Paste and Green Chilies:</strong> Add ginger-garlic paste and green chilies. Sauté for 2 minutes until the raw smell disappears.</li> <li><strong>Add Tomatoes:</strong> Add chopped tomatoes and cook until they turn soft and the oil separates.</li> <li><strong>Add Malvani Masala Paste:</strong> Add the prepared Malvani masala paste and mix well. Cook for 2-3 minutes.</li> <li><strong>Add Chicken:</strong> Add the marinated chicken pieces and mix well so they are coated with the masala. Cook for 5-7 minutes.</li> <li><strong>Add Water and Simmer:</strong> Add 1 cup of water (adjust as needed) and bring to a boil. Reduce the heat, cover, and simmer for 20-25 minutes until the chicken is fully cooked and tender.</li> <li><strong>Garnish and Serve:</strong> Garnish with fresh coriander leaves. Serve hot with steamed rice, bhakri, or roti.</li> </ol>
+                </div>
+            </div>
+    
+            <!-- Recipe 3 -->
+            <div class="tab-pane fade" id="recipe3" role="tabpanel">
+                <div class="recipe-media"> 
+                    <img src="./images/mutton_rasaa.jpg"alt="mutton rasaa" class="recipe-img curry_img img-fluid">
+
+                        <video controls  class="curry_video rounded-3 lazy-video mutton_video_tag" poster="./images/mutton_rassa_poster.jpeg" loading="lazy">
+                            <!-- <source src="videos/mutton_rassa.mp4" type="video/mp4"> -->
+                        </video>
+                    
+                </div>
+                <!-- <h4 class="text-center mt-5">Crab Curry</h4> -->
+                <div class="ingredients mt-5 ">
+                    <h5 class="recipe_head"><strong>Ingredients:</strong></h5>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <ul>
+                                <li>500g Mutton, cut into pieces</li>
+                                <li>2 Onions, finely chopped</li>
+                                <li>2 Tomatoes, pureed</li>
+                                <li>1/2 cup Fresh Coconut, grated</li>
+                                <li>1 tbsp Malvani Masala</li>
+                                <li>1 tsp Red Chili Powder</li>
+                                <li>1/2 tsp Turmeric Powder</li>
+                                <li>1 tsp Coriander Powder</li>
+                                <li>1/2 tsp Garam Masala</li>
+                                <li>1 tbsp Ginger-Garlic Paste</li>
+                            </ul>
+                            
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <ul>
+                                <li>2 tbsp Oil</li>
+                                <li>1 tsp Mustard Seeds</li>
+                                <li>8-10 Curry Leaves</li>
+                                <li>1 tbsp Poppy Seeds (Khuskhus), soaked</li>
+                                <li>1 tsp Cumin Seeds</li>
+                                <li>2 Green Chilies, slit</li>
+                                <li>Salt to taste</li>
+                                <li>Water as required</li>
+                                <li>Fresh Coriander Leaves, chopped (for garnish)</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                <div class="steps mt-4">
+                    <h5 class="recipe_head"><strong>How to Prepare:</strong></h5>
+                    <ol>
+                        <li>Heat oil in a deep pan and add mustard seeds, cumin seeds, and curry leaves. Let them splutter.</li>
+                        <li>Add finely chopped onions and sauté until golden brown.</li>
+                        <li>Mix in ginger-garlic paste and sauté until raw smell disappears.</li>
+                        <li>Add grated coconut and soaked poppy seeds, then roast until golden brown. Grind into a smooth paste.</li>
+                        <li>In the same pan, add tomato puree and cook until oil separates.</li>
+                        <li>Now add Malvani Masala, red chili powder, turmeric, coriander powder, and garam masala. Mix well.</li>
+                        <li>Add the cleaned mutton pieces and sauté for 5-7 minutes on medium heat.</li>
+                        <li>Pour in enough water, cover, and let it cook until the mutton turns tender (use a pressure cooker for faster cooking).</li>
+                        <li>Once cooked, check seasoning and simmer for a few more minutes to enhance the flavors.</li>
+                        <li>Garnish with fresh coriander leaves and serve hot with bhakri, rice, or chapati.</li>
+                    </ol>
+                    
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    
+    <!-- RECIPEE SECTION END -->
+   
+
+
+
+    <!-- FOOTER SECTION START -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>We bring you the finest organic spices, rich in aroma and taste. Elevate your cooking with our premium range.</p>
+                <a class="read_more_text" href="./index.html#about_section">Read more...</a>
+            </div>
+            <div class="footer-column links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html#about_section">About</a></li>
+                    <li><a href="./index.html#product_section">Products</a></li>
+                    <li><a href="./recipe.html">Recipes</a></li>
+                    <li><a href="./index.html#contact_section">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-column contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +91 8888371472</p>
+                <p><i class="fas fa-envelope"></i> bkmasale007@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> H.NO.1446, Lanjewadi, Tal:Kankavli, Dist:Sindhudurg, Kalmath 416602</p>
+            </div>
+        </div>
+
+        
+        <hr>
+        <p class="copyright">&copy; 2025 Bhalchandra Krupa Masale. All Rights Reserved.</p>
+    </footer>
+    
+    <!-- FOOTER SECTION END -->
+
+
+    <!-- STICKY WHATSAPP ICON -->
+    <a href="https://wa.me/918888371472" target="_blank"" class="sticky_ico" target="_blank">
+        <i class="fa-brands fa-whatsapp stick"></i>
+    </a>
+
+    <p class="float"></p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            
+            $("#recipe2-tab").click(function(){
+                // console.log("testing2")
+                $(".curry_video_tag").html("");
+                $(".mutton_video_tag").html("");
+
+                $(".chicken_video_tag").html('<source src="./videos/malvani_chicken.mp4" type="video/mp4">');
+            })
+
+            $("#recipe3-tab").click(function(){
+                // console.log("testing3")
+                $(".curry_video_tag").html("");
+                $(".chicken_video_tag").html("");
+
+                $(".mutton_video_tag").html('<source src="videos/mutton_rassa.mp4" type="video/mp4"> ');
+            })
+
+            $("#recipe1-tab").click(function(){
+                // console.log("testing3")
+                $(".chicken_video_tag").html("");
+                $(".mutton_video_tag").html("");
+
+                $(".curry_video_tag").html('<source src="./videos/crabcurryvideo.mp4" type="video/mp4">');
+            })
+
+
+        })
+
+    </script>
+
+</body>
+</html>

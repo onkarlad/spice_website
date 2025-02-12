@@ -1,0 +1,106 @@
+/* FOR 1199 */
+@media (max-width:1199px)
+{
+   .address_card{
+    margin-top: 30px;
+   } 
+}
+
+
+/* FOR 991 */
+@media (max-width: 991px) {
+    .prod_section{
+        padding: 300px 20px 100px 20px;
+    }
+
+    .btn-custom{
+        margin-bottom: 8px;
+    }
+    
+}
+
+/* FOR 767 */
+@media (max-width: 767px) {
+    .carousel-caption h1{
+        font-size: 55px;
+    }
+
+    .parallax{
+        padding:0px 40px;
+    }
+
+    .email_card{
+        margin-top: 30px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-column {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+}
+
+/* FOR 575 */
+@media (max-width: 575px) {
+    .carousel-caption h1{
+        font-size:40px;
+    }
+
+    .carousel-caption p{
+        font-size: 16px;
+    }   
+
+    .parallax{
+        padding: 0px 19px;
+    }
+    .parallax h1{
+        font-size: 35px;
+    }
+
+    .faq_head{
+        font-size: 45px;
+    }
+
+    .faq-question{
+        font-size: 17px;
+    }
+
+    .faq-answer{
+        font-size: 15px;
+    }
+
+    .icon {
+        font-size: 35px;
+    }
+
+    .faq-question{
+        padding: 15px 5px 15px 25px;
+    }
+
+}
+
+@media all and (max-width: 500px) {
+	.testim .arrow {
+		font-size: 1.5em;
+	}
+	
+	.testim .cont div p {
+		line-height: 25px;
+	}
+
+}
+
+@media (max-width:450px){
+    .prod_section{
+        padding: 250px 20px 150px 20px;
+    }
+
+    .curry_img, .curry_video{
+        max-height: 180px;
+    }
+}
+

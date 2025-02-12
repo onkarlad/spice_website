@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBK MASALE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="icon" type="image/png" href="./images/start_image.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="preloader">
+    <img src="./images/loader 4.jpg" alt="Loading..." id="chili-loader">
+</div>
+    
+<div id="content" style="display: none;">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="home">
+        <div class="container">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                onclick="toggleIcon(this)">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#"
+                            onclick="setActive(this); closeNavbar()">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about_section"
+                            onclick="setActive(this); closeNavbar()">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#product_section"
+                            onclick="setActive(this); closeNavbar()">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./recipe.html"
+                            onclick="setActive(this); closeNavbar()">Recipes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq_section"
+                            onclick="setActive(this); closeNavbar()">Faq's</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact_section"
+                            onclick="setActive(this); closeNavbar()">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link contact_btn" href="#"><span><i
+                                    class="fa-solid fa-phone"></i>&nbsp;</span>8888371472</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner Carousel -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('./images/banner1.webp');">
+                <div class="carousel-caption text-white">
+                    <h1><span class="first_half_text">Organic </span>Goodness</h1>
+                    <p>Savor the essence of purity with our organic spices and wholesome products.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('./images/banner2.webp');">
+                <div class="carousel-caption text-white">
+                    <h1><span class="first_half_text">Spice Up</span> Your Life</h1>
+                    <p>From farm to kitchen — discover the magic of fresh, organic spices in every meal.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('./images/banner3.webp');">
+                <div class="carousel-caption text-white">
+                    <h1><span class="first_half_text">Exotic & </span>Aromatic</h1>
+                    <p>Add depth, aroma, and nutrition to your dishes with our organic selections.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!-- About Us Section Start -->
+    <div class="container-fluid about mb-4" id="about_section">
+        <div class="container ab_container">
+            <div class="row">
+                <div class="col-12 text-center ab_head">ABOUT US</div>
+                <div class="first_half_ab col-12 col-lg-7 mb-4">
+                    <h5 class="mb-4">Bringing You the Essence of Organic Spices</h5>
+                    <p class="ab_text">At <mark class="brand_name">Bhalchandra Krupa Masale,</mark> we are passionate
+                        about bringing the finest, hand-selected spices from around the world to your kitchen. Our
+                        journey began with a commitment to purity, authenticity, and quality, ensuring that every spice
+                        we offer is sourced responsibly and packed with rich, natural flavors.</p>
+                    <p class="ab_text">Our mission is to preserve traditional spice heritage while meeting the demands
+                        of modern, health-conscious consumers. With sustainability at our core, we ensure ethical
+                        sourcing and eco-friendly packaging to protect both nature and the purity of our products.</p>
+                    <p class="last_quote"><i class="fa-solid fa-quote-left"></i> Experience the essence of real spices —
+                        pure, fresh, and full of flavor. <i class="fa-solid fa-quote-right"></i></p>
+                </div>
+
+                <div class="second_half_ab col-12 col-lg-5 image-container">
+                    <img src="./images/sidebanner2.webp" alt="about us" class="img-fluid" loading="lazy">
+                    <img src="images/sidebanner.webp" alt="about us" class="img-fluid" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Us Section End -->
+
+
+    <!-- PRODUCT SECTION START -->
+    <div class="container-fluid prod_section" id="product_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 product_head text-center">Our Products</div>
+                <p class="col-12 text-center fw-bold fst-italic"><i class="fa-solid fa-quote-left"></i> Pure, Natural,
+                    and Organic – Elevate Your Lifestyle with the Best! &nbsp;<i class="fa-solid fa-quote-right"></i>
+                </p>
+                <div class="start_image text-center col-12"><img src="./images/start_image.png" alt="star" loading="lazy"></div>
+            </div>
+
+            <!-- product cards start -->
+            <div class="row cards_section">
+                <!-- Product Card 1 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card">
+                        <img src="./images/about_us_side_banner.webp" alt="Organic Turmeric" class="product-img" loading="lazy">
+                        <div class="product-details">
+                            <h3 class="product-title">Organic Turmeric</h3>
+                            <p class="product-price">$10.99</p>
+                            <p class="product-description">Rich in antioxidants, perfect for health and cooking.</p>
+                            <a href="#" class="btn-custom">Order Now</a>
+                            <a href="#" class="btn-view">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card">
+                        <img src="./images/sidebanner.webp" alt="Organic Cinnamon" class="product-img" loading="lazy">
+                        <div class="product-details">
+                            <h3 class="product-title">Organic Cinnamon</h3>
+                            <p class="product-price">$8.49</p>
+                            <p class="product-description">Aromatic, great for desserts and health.</p>
+                            <a href="#" class="btn-custom">Order Now</a>
+                            <a href="#" class="btn-view">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card">
+                        <img src="./images/example.webp" alt="Pure Honey" class="product-img" loading="lazy">
+                        <div class="product-details">
+                            <h3 class="product-title">Pure Organic Honey</h3>
+                            <p class="product-price">$12.99</p>
+                            <p class="product-description">perfect for natural sweetness.</p>
+                            <a href="#" class="btn-custom">Order Now</a>
+                            <a href="#" class="btn-view">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Product Card 1 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card">
+                        <img src="./images/about_us_side_banner.webp" alt="Organic Turmeric" class="product-img" loading="lazy">
+                        <div class="product-details">
+                            <h3 class="product-title">Organic Turmeric</h3>
+                            <p class="product-price">$10.99</p>
+                            <p class="product-description">Rich in antioxidants, perfect for health and cooking.</p>
+                            <a href="#" class="btn-custom">Order Now</a>
+                            <a href="#" class="btn-view">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card">
+                        <img src="./images/sidebanner.webp" alt="Organic Cinnamon" class="product-img" loading="lazy">
+                        <div class="product-details">
+                            <h3 class="product-title">Organic Cinnamon</h3>
+                            <p class="product-price">$8.49</p>
+                            <p class="product-description">Aromatic, great for desserts and health.</p>
+                            <a href="#" class="btn-custom">Order Now</a>
+                            <a href="#" class="btn-view">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card">
+                        <img src="./images/example.webp" alt="Pure Honey" class="product-img" loading="lazy">
+                        <div class="product-details">
+                            <h3 class="product-title">Pure Organic Honey</h3>
+                            <p class="product-price">$12.99</p>
+                            <p class="product-description">perfect for natural sweetness.</p>
+                            <a href="#" class="btn-custom">Order Now</a>
+                            <a href="#" class="btn-view">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- product cards end -->
+
+
+        </div>
+    </div>
+    <!-- PRODUCT SECTION END -->
+
+
+    <!-- CALL TO ACTION SECTION START -->
+    <div class="parallax">
+        <h1>BHALCHANDRA KRUPA <br>MASALE</h1>
+        <p>Experience the richness of handpicked, organic, and aromatic spices sourced <br>from the best farms.</p>
+        <a href="https://wa.me/918888371472" target="_blank" class="cta-btn">Contact Us</a>
+    </div>
+    <!-- CALL TO ACTION SECTION END -->
+
+
+    <!-- CONTACT US SECTION START -->
+    <div class="container-fluid contact_sec" id="contact_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 contact_head text-center">Contact Us</div>
+                <p class="col-12 text-center fw-bold fst-italic"><i class="fa-solid fa-quote-left"></i>Get in Touch –
+                    Let’s Spice Up Your Experience! &nbsp;<i class="fa-solid fa-quote-right"></i></p>
+                <div class="start_image text-center col-12"><img src="./images/start_image.png" alt="star" loading="lazy"></div>
+            </div>
+
+
+            <div class="contact-container">
+
+                <!-- Phone Card -->
+                <div class="contact-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>Call us anytime</p>
+                    <p><a href="tel:+918888371472">+91 8888371472</a></p>
+                </div>
+
+                <!-- Email Card -->
+                <div class="contact-card email_card">
+                    <div class="icon-circle">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>Drop us a message</p>
+                    <p><a href="mailto:bkmasale007@gmail.com">bkmasale007@gmail.com</a></p>
+                </div>
+
+                <!-- Address Card -->
+                <div class="contact-card address_card">
+                    <div class="icon-circle">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Address</h3>
+                    <p>Visit our office</p>
+                    <p><a href="https://maps.app.goo.gl/qzoX7f2m4mX6wUAc9?g_st=com.google.maps.preview.copy"
+                            target="_blank">H.NO.1446, Lanjewadi, Tal:Kankavli, Dist:Sindhudurg, Kalmath 416602</a></p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- CONTACT US SECTION END -->
+
+
+    <!-- TESTIMONIAL SECTION START -->
+
+    <section id="testim" class="testim">
+        <!--         <div class="testim-cover"> -->
+           
+        <div class="wrap">
+            <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+            <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+            <ul id="testim-dots" class="dots">
+                <li class="dot active"></li><!--
+                        -->
+                <li class="dot"></li><!--
+                        -->
+                <li class="dot"></li><!--
+                        -->
+                <li class="dot"></li><!--
+                        -->
+                <li class="dot"></li>
+            </ul>
+            <div id="testim-content" class="cont">
+                <div class="active">
+                    <div class="img img-fluid"><img src="./images/test1.jpg" alt="" loading="lazy"></div>
+                    <h2>Swapnil Patil</h2>
+                    <p>I have used many brands of spices, but the quality of these spices is truly exceptional. The aroma is so amazing that the entire house smells of spices while cooking. This is the perfect choice to enhance the taste of any dish. It brings an authentic and traditional flavor!</p>
+                </div>
+
+                <div>
+                    <div class="img img-fluid"><img src="./images/test2.jpg" alt="" loading="lazy"></div>
+                    <h2>Sameer Rane</h2>
+                    <p>Spices are an essential part of my daily cooking, and these spices have taken my dishes to the next level. Each spice has a natural taste, and it does not feel adulterated in any way. Such pure spices make every dish delicious. I will definitely repurchase!</p>
+                </div>
+
+                <div>
+                    <div class="img img-fluid"><img src="./images/test3.jpg" alt="" loading="lazy"></div>
+                    <h2>Rahul Khot</h2>
+                    <p>Spices are the soul of Indian cuisine, and this brand has given my cooking a unique identity. The red chili powder, turmeric, and garam masala are all fresh and of premium quality. The food tastes truly homemade and full of flavors. When buying spices, quality matters the most, and this brand delivers just that!</p>
+                </div>
+
+                <div>
+                    <div class="img img-fluid"><img src="./images/test4.jpg" alt="" loading="lazy"></div>
+                    <h2>Nikhil Pawar</h2>
+                    <p>My mother’s home-cooked meals have a traditional taste, and these spices have enhanced it even more. The perfect balance in spice blends ensures that every dish turns out flavorful and consistent. All the spices are fresh and natural, adding a unique aroma and taste to everyday meals.</p>
+                </div>
+
+                <div>
+                    <div class="img img-fluid"><img src="./images/test5.jpg" alt="" loading="lazy"></div>
+                    <h2>Kunal Shinde</h2>
+                    <p>I decided to try this brand’s spices, and it turned out to be the best decision. The aroma and taste of the spices are outstanding. The mutton masala and garam masala, in particular, give restaurant-style flavor to homemade food. There are no artificial colors or flavors, making the taste completely natural. The rich color of the spices also enhances the appeal of the dishes!</p>
+                </div>
+
+            </div>
+
+        </div>
+        <!--         </div> -->
+    </section>
+    <!-- TESTIMONIAL SECTION END -->
+
+    
+
+    <!-- FAQ SECTION START -->
+    <div class="container-fluid faq_sec" id="faq_section">
+        <div class="container">
+            <div class="row faq_head_row">
+                <div class="col-12 faq_head text-center">Frequently Asked Questions</div>
+                <p class="col-12 text-center fw-bold fst-italic"><i class="fa-solid fa-quote-left"></i> Clear Your Doubts, Shop with Confidence! &nbsp;<i class="fa-solid fa-quote-right"></i>
+                </p>
+                <div class="start_image text-center col-12"><img src="./images/start_image.png" alt="star" loading="lazy"></div>
+            </div>
+
+            <!-- question and answer -->
+             <div class="row">
+                <div class="faq-container">
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="icon">+</span>
+                            How can I contact customer support?
+                        </div>
+                        <div class="faq-answer">
+                            <span class="fw-bold">Phone:</span> 8888371472
+                            <br>
+                            <span class="fw-bold">Email:</span> bkmasale007@gmail.com
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="icon">+</span>
+                            How will my order be delivered to me?
+                        </div>
+                        <div class="faq-answer">
+                            Once your order is placed, we carefully pack your product in high-quality, sealed packaging to ensure freshness.Standard shipping usually takes 3-7 business days, while express delivery can take 1-3 business days, depending on your location.
+                        </div>
+                    </div>
+                
+                
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="icon">+</span>
+                            Are your spices 100% natural and organic?
+                        </div>
+                        <div class="faq-answer">
+                            Yes! We source our spices from trusted farmers and ensure they are 100% natural, free from preservatives, artificial colors, and harmful chemicals.
+                        </div>
+                    </div>
+                
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="icon">+</span>
+                            How do I store spices to maintain their freshness?
+                        </div>
+                        <div class="faq-answer">
+                            <span class="fw-bold">Store them in airtight containers</span> to prevent moisture.
+                            <br>
+                            <span class="fw-bold">Keep them away from direct sunlight</span> to maintain flavor..
+                            <br>
+                            <span class="fw-bold">Avoid refrigeration</span> for powdered spices, as moisture may cause clumping.
+                            
+                        </div>
+                    </div>
+                
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span class="icon">+</span>
+                            What payment methods do you accept?
+                        </div>
+                        <div class="faq-answer">
+                            UPI, Google Pay, PhonePe, Paytm
+                            <br>
+                            Cash on Delivery (COD) – Available in select locations
+                            <br>
+                            Bank Transfers for bulk orders
+                        </div>
+                    </div>
+                </div>
+             </div>
+
+
+        </div>
+    </div>
+    <!-- FAQ SECTION END -->
+
+
+    <!-- FOOTER SECTION START -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>We bring you the finest organic spices, rich in aroma and taste. Elevate your cooking with our premium range.</p>
+                <a class="read_more_text" href="#about_section">Read more...</a>
+            </div>
+            <div class="footer-column links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about_section">About</a></li>
+                    <li><a href="#product_section">Products</a></li>
+                    <li><a href="./recipe.html">Recipes</a></li>
+                    <li><a href="#contact_section">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-column contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +91 8888371472</p>
+                <p><i class="fas fa-envelope"></i> bkmasale007@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> H.NO.1446, Lanjewadi, Tal:Kankavli, Dist:Sindhudurg, Kalmath 416602</p>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">&copy; 2025 Bhalchandra Krupa Masale. All Rights Reserved.</p>
+    </footer>
+    
+    <!-- FOOTER SECTION END -->
+
+
+
+
+    <!-- STICKY WHATSAPP ICON -->
+    <a href="https://wa.me/918888371472" target="_blank"" class=" float" target="_blank">
+        <i class="fa-brands fa-whatsapp my-float"></i>
+    </a>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
