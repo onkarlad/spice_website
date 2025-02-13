@@ -188,3 +188,249 @@ document.querySelectorAll(".faq-question").forEach(item => {
         }
     });
 });
+
+//getting product name value
+const anchorTags = document.querySelectorAll('.product_name_data');
+anchorTags.forEach(anchor => {
+    anchor.addEventListener('click', function (event) {
+       event.preventDefault();
+
+      const dataNameValue = this.getAttribute('data-product_name');
+    //   console.log(dataNameValue)
+
+      const hiddenInput = document.getElementById('product_hidden');
+      hiddenInput.value = dataNameValue;
+
+    });
+  });
+
+
+
+//order form
+var ord_button = document.getElementById("order_btn");
+
+ord_button.addEventListener("click", (function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // console.log("testing")
+
+    // Fetch input values
+    let name = document.getElementById("name").value.trim();
+    let mobile = document.getElementById("mobile").value.trim();
+    let email = document.getElementById("email").value.trim();
+
+    let country = document.getElementById("country").value;
+    let state = document.getElementById("state").value;
+    let district = document.getElementById("district").value;
+    let city = document.getElementById("city").value.trim();
+    let street = document.getElementById("street").value.trim();
+    let postal = document.getElementById("postal").value.trim();
+
+    let quantity = document.getElementById("quantity").value.trim();
+
+    let product_name = document.getElementById("product_hidden").value.trim();
+    let unit_value = document.getElementById("unit").value.trim();
+    // console.log(product_name)
+
+    // console.log("name: "+name+", mobile:"+mobile+", state:"+state+", city:"+city+", street:"+street+", postal:"+postal+", quantity:"+quantity+", Email:"+email+", country:"+country)
+
+    error_found =true;
+    let name_span = document.getElementById('name_error');
+    let regex = /^[A-Za-z\s]*$/;
+    //name error
+    if(name === "")
+    {
+        name_span.textContent = 'Name field is required.';
+        error_found =true;
+        return false;
+    }
+    else if(!regex.test(name))
+    {
+        name_span.textContent = 'Only alphabets are allowed.';
+        error_found =true;
+        return false;
+    }
+    else{
+        name_span.textContent = '';
+        error_found=false;
+    }
+
+    //mobile error
+    let mobile_span = document.getElementById('mobile_error');
+    let numeric_regex = /^\d+$/;
+    if(mobile === "")
+    {
+        mobile_span.textContent = 'Mobile field is required.';
+        error_found =true;
+        return false;
+    }
+    else if(!numeric_regex.test(mobile))
+    {
+        mobile_span.textContent = 'Only numeric values are allowed.';
+        error_found =true;
+        return false;
+    }
+    else if(!/^\d{10}$/.test(mobile))
+    {
+        mobile_span.textContent ='Enter 10 digit valid mobile number.';
+        error_found =true;
+        return false;
+    }
+    else{
+        mobile_span.textContent = '';
+        error_found=false;
+    }
+
+
+    //email error
+    let email_span = document.getElementById('email_error');
+    if(email!="" && !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email))
+    {
+        email_span.textContent ='Enter a valid email.';
+        error_found =true;
+        return false;
+    }
+    else{
+        email_span.textContent = '';
+        error_found=false;
+    }
+
+
+    //state error
+    let state_span = document.getElementById('state_error');
+    if(state === "")
+    {
+        state_span.textContent ='Please select a state.';
+        error_found =true;
+        return false;
+    }
+    else{
+        state_span.textContent = '';
+        error_found=false;
+    }
+
+    //district error
+    let district_span = document.getElementById('district_error');
+    if(district==="")
+    {
+        district_span.textContent ='District field is required.';
+        error_found =true;
+        return false;
+    }
+    else if(!regex.test(district))
+    {
+        district_span.textContent ='Only alphabets are allowed.';
+        error_found =true;
+        return false;
+    }
+    else{
+        district_span.textContent = '';
+        error_found=false;
+    }
+
+    //city error
+    let city_span = document.getElementById('city_error');
+    if(city==="")
+    {
+        city_span.textContent ='City field is required.';
+        error_found =true;
+        return false;
+    }
+    else if(!regex.test(city))
+    {
+        city_span.textContent ='Only alphabets are allowed.';
+        error_found =true;
+        return false;
+    }
+    else{
+        city_span.textContent = '';
+        error_found=false;
+    }
+    
+
+    //street error
+    let street_span = document.getElementById('street_error');
+    if(street==="")
+    {
+        street_span.textContent ='Street address is required.';
+        error_found =true;
+        return false;
+    }
+    else{
+        street_span.textContent = '';
+        error_found=false;
+    }
+
+    //postal code error
+    let postal_code_span = document.getElementById('postal_code_error');
+    // let numeric_regex = /^\d+$/;
+    if(postal==="")
+    {
+        postal_code_span.textContent ='Postal Code is required.';
+        error_found =true;
+        return false;
+    }
+    else if(!numeric_regex.test(postal))
+    {
+        postal_code_span.textContent ='Only numeric values are allowed.';
+        error_found =true;
+        return false;
+    }
+    else if(!/^\d{6}$/.test(postal))
+    {
+        postal_code_span.textContent ='Enter a 6 digit valid postal code.';
+        error_found =true;
+        return false;
+    }
+    else{
+        postal_code_span.textContent = '';
+        error_found=false;
+    }
+
+
+    //quantity error
+    let quantity_span = document.getElementById('quantity_error');
+    if(quantity==="")
+    {
+        quantity_span.textContent ='Quantity is required.';
+        error_found =true;
+        return false;
+    }
+    else if(!numeric_regex.test(quantity))
+    {
+        quantity_span.textContent ='Only numeric values are allowed';
+        error_found =true;
+        return false;
+    }
+    else if(quantity<=0)
+    {
+        quantity_span.textContent ='Quantity should be greater than 0.';
+        error_found =true;
+        return false;
+    }
+    else{
+        quantity_span.textContent = '';
+        error_found=false;
+    }
+
+
+    // console.log(error_found)
+    if(error_found===false)
+    {
+        const message = encodeURIComponent("Hello "+name+",\n Thank you for your order! We’re excited to serve you. Here are the details of your purchase: \n \n *Order Details :* \n Name: "+name+"\n Mobile: "+mobile+"\n Email: "+email+"\n Country: "+country+"\n State: "+state+"\n Sistrict: "+district+"\n City: "+city+"\n Street Address: "+street+"\n Postal Code: "+postal+"\n Product Name: "+product_name+"\n Quantity: "+quantity+" "+unit_value+" \n \n Thank you for shopping with us! \n If you have any questions or need further assistance, feel free to reach out to us.");
+        const dynamicPath1 = `https://wa.me/8888371472?text=${message}`;
+        ord_button.href = dynamicPath1;
+
+        // console.log(dynamicPath1);
+        window.open(dynamicPath1, "_blank");
+    }
+
+
+    
+
+    // alert("Order placed successfully!");
+    // document.getElementById("orderForm").reset(); // Reset form after submission
+    // let modal = bootstrap.Modal.getInstance(document.getElementById('orderModal'));
+    // modal.hide(); 
+    // Close the modal
+}));

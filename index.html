@@ -27,7 +27,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="home">
         <div class="container">
-            <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand" href="./index.html">Logo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 onclick="toggleIcon(this)">
                 <!-- <span class="navbar-toggler-icon"></span> -->
@@ -103,7 +103,7 @@
                 <div class="start_image text-center col-12"><img src="./images/start_image.png" alt="star" loading="lazy"></div>
                 <div class="first_half_ab col-12 col-lg-7 mb-4">
                     <h5 class="mb-4">Bringing You the Essence of Organic Spices</h5>
-                    <p class="ab_text">At <mark class="brand_name">Bhalchandra Krupa Masale,</mark> we are passionate
+                    <p class="ab_text">At <mark class="brand_name">Shri Bhalchandra Krupa Masale,</mark> we are passionate
                         about bringing the finest, hand-selected spices from around the world to your kitchen. Our
                         journey began with a commitment to purity, authenticity, and quality, ensuring that every spice
                         we offer is sourced responsibly and packed with rich, natural flavors.</p>
@@ -142,10 +142,10 @@
                     <div class="product-card">
                         <img src="./images/about_us_side_banner.webp" alt="Organic Turmeric" class="product-img" loading="lazy">
                         <div class="product-details">
-                            <h3 class="product-title">Organic Turmeric</h3>
-                            <p class="product-price">$10.99</p>
-                            <p class="product-description">Rich in antioxidants, perfect for health and cooking.</p>
-                            <a href="#" class="btn-custom">Order Now</a>
+                            <h3 class="product-title">Garam Masala</h3>
+                            <p class="product-price"><i class="fa-solid fa-indian-rupee-sign"></i> 350</p>
+                            <p class="product-description">Bold aroma, rich flavor – Garam Masala perfection!</p>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#orderModal" class="btn-custom product_name_data" data-product_name="Garam Masala">Order Now</a>
                             <a href="#" class="btn-view">View Details</a>
                         </div>
                     </div>
@@ -159,8 +159,8 @@
                             <h3 class="product-title">Organic Cinnamon</h3>
                             <p class="product-price">$8.49</p>
                             <p class="product-description">Aromatic, great for desserts and health.</p>
-                            <a href="#" class="btn-custom">Order Now</a>
-                            <a href="#" class="btn-view">View Details</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#orderModal"  class="btn-custom product_name_data" data-product_name="Fish Masala">Order Now</a>
+                            <a href="#"  class="btn-view">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -467,7 +467,7 @@
             </div>
         </div>
         <hr>
-        <p class="copyright">&copy; 2025 Bhalchandra Krupa Masale. All Rights Reserved.</p>
+        <p class="copyright">&copy; 2025 Shri Bhalchandra Krupa Masale. All Rights Reserved.</p>
     </footer>
     
     <!-- FOOTER SECTION END -->
@@ -479,6 +479,130 @@
     <a href="https://wa.me/918888371472" target="_blank"" class=" float" target="_blank">
         <i class="fa-brands fa-whatsapp my-float"></i>
     </a>
+
+
+    <!-- order modal form start-->
+     <!-- Order Form Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="orderModalLabel">Create Order</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="orderForm">
+                    <input type="hidden" name="prod_name" id="product_hidden">
+                    <!-- Customer Details -->
+                    <h6>Customer Details</h6>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="name">
+                        <span id="name_error" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mobile <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="mobile">
+                        <span id="mobile_error" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email">
+                        <span id="email_error" class="text-danger"></span>
+                    </div>
+
+                    <!-- Shipping Details -->
+                    <h6>Shipping Details</h6>
+                    <div class="mb-3">
+                        <label class="form-label">Country <span class="text-danger">*</span></label>
+                        <p><small class="fst-italic text-primary">Note: Currently available for India.</small></p>
+                        <select class="form-select" id="country">
+                            <option>India</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">State <span class="text-danger">*</span></label>
+                        <select class="form-select" id="state">
+                            <option value="">Select State</option>
+                            <option value="AndhraPradesh">Andhra Pradesh</option>
+                            <option value="ArunachalPradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="HimachalPradesh">Himachal Pradesh</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="MadhyaPradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="TamilNadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="UttarPradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="WestBengal">West Bengal</option>
+                        </select>
+                        <span id="state_error" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">District <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="district">
+                        <span id="district_error" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">City <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="city">
+                        <span id="city_error" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Street Address <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="street">
+                        <span id="street_error" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Postal Code <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="postal">
+                        <span id="postal_code_error" class="text-danger"></span>
+                    </div>
+
+                    <!-- Product Details -->
+                    <h6>Product Details</h6>
+                    <label class="form-label">Quantity <span class="text-danger">*</span></label>
+                    <div class="mb-3 d-flex">
+                        <input type="text" class="form-control me-2" id="quantity" placeholder="Quantity">
+                        <select class="form-select" id="unit">
+                            <option>Kg</option>
+                            <option>Grams</option>
+                        </select>
+                    </div>
+                    <span id="quantity_error" class="text-danger"></span>
+
+                    <!-- Order Now Button -->
+                    <a href="#" class="order_btn btn btn-warning w-100" id="order_btn">Order Now</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- order modal form end-->
+
+
+
+
+
+
+
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./script.js"></script>

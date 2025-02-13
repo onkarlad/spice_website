@@ -256,6 +256,11 @@ a{
     font-weight: bold;
     margin: 5px 0;
 }
+
+.product-price i{
+    font-size: 16px;
+}
+
 .product-description {
     font-size: 14px;
     color: #666;
@@ -1253,5 +1258,22 @@ hr {
 }
 
 
+/* MODAL STYLE START */
+.modal-header {
+    background: #f4b323;
+    color: white;
+}
 
+#orderModal{
+    margin-top: 80px;
+    padding-bottom: 100px;
+}
 
+.order_btn{
+    color: var(--black_color);
+    font-weight: 500;
+}
+
+.modal-body h6{
+    font-weight: 600;
+}
