@@ -425,12 +425,4 @@ ord_button.addEventListener("click", (function(event) {
         window.open(dynamicPath1, "_blank");
     }
 
-
-    
-
-    // alert("Order placed successfully!");
-    // document.getElementById("orderForm").reset(); // Reset form after submission
-    // let modal = bootstrap.Modal.getInstance(document.getElementById('orderModal'));
-    // modal.hide(); 
-    // Close the modal
 }));
