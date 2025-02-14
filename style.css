@@ -86,7 +86,7 @@ a{
 .contact_btn{
     background-color: var(--orange_color);
     padding: 6px 10px 6px 10px;
-    border-radius: 5px;
+    border-radius: 20px;
     color: var(--black_color);
     border: 2px solid var(--orange_color);
     transition: all 0.5s ease;
