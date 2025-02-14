@@ -16,7 +16,21 @@
     .btn-custom{
         margin-bottom: 8px;
     }
+
+    .second_half_ab {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
     
+    .image-container img{
+        margin-top: 260px;
+    }
+
+    .about_row{
+        padding-left: 0%;
+    }
+
 }
 
 /* FOR 767 */
