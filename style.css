@@ -47,16 +47,18 @@ body{
 }
 
 
-
-
-
 a{
     text-decoration: none;
 }
-/* NAVBAR SYART */
+/* NAVBAR START */
+.navbar-brand img{
+    width: 80px;
+    /* height: 100px; */
+}
+
 .navbar{
     background-color: var(--black_color);
-    padding: 25px 0px;
+    /* padding: 25px 0px; */
     z-index: 222222222;
 }
 .nav-link{
@@ -68,12 +70,17 @@ a{
 }
 
 .navbar-nav .nav-link.active {
-    color: var(--orange_color) !important;
+    /* color: var(--orange_color) !important; */
     font-weight: bold;
+    background-color: var(--orange_color);
+    color: var(--black_color);
+    border-radius: 20px;
+    padding: 5px 20px;
+
 }
 
 .navbar .nav-item{
-    margin-right: 20px;
+    margin-right: 25px;
 }
 
 .contact_btn{
@@ -164,6 +171,8 @@ a{
     color: var(--section_heading_color);
     /* margin-bottom: 50px; */
 }
+
+
 
 .first_half_ab, .second_half_ab{
     margin-top: 60px;
@@ -342,6 +351,7 @@ a{
     letter-spacing: 2px; 
     font-size: 60px;
 }
+
 
 .parallax p{
     font-size: 20px ;
