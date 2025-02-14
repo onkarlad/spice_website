@@ -417,7 +417,7 @@ ord_button.addEventListener("click", (function(event) {
     // console.log(error_found)
     if(error_found===false)
     {
-        const message = encodeURIComponent("Hello "+name+",\nThank you for your order! We’re excited to serve you. Here are the details of your purchase: \n\n*Order Details :*\nName: "+name+"\nMobile: "+mobile+"\nEmail: "+email+"\nCountry: "+country+"\nState: "+state+"\nSistrict: "+district+"\nCity: "+city+"\nStreet Address: "+street+"\nPostal Code: "+postal+"\nProduct Name: "+product_name+"\nQuantity: "+quantity+" "+unit_value+" \n\nThank you for shopping with us! \nIf you have any questions or need further assistance, feel free to reach out to us.");
+        const message = encodeURIComponent("Hello "+name+",\nThank you for your order! We’re excited to serve you. Here are the details of your purchase: \n\n*Order Details :*\nName: "+name+"\nMobile: "+mobile+"\nEmail: "+email+"\nCountry: "+country+"\nState: "+state+"\nDistrict: "+district+"\nCity: "+city+"\nStreet Address: "+street+"\nPostal Code: "+postal+"\nProduct Name: "+product_name+"\nQuantity: "+quantity+" "+unit_value+" \n\nThank you for shopping with us! \nIf you have any questions or need further assistance, feel free to reach out to us.");
         const dynamicPath1 = `https://wa.me/918888371472?text=${message}`;
         ord_button.href = dynamicPath1;
 
