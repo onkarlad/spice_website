@@ -420,11 +420,77 @@ ord_button.addEventListener("click", (function(event) {
         const message = encodeURIComponent("Hello "+name+",\nThank you for your order! We’re excited to serve you. Here are the details of your purchase: \n\n*Order Details :*\nName: "+name+"\nMobile: "+mobile+"\nEmail: "+email+"\nCountry: "+country+"\nState: "+state+"\nDistrict: "+district+"\nCity: "+city+"\nStreet Address: "+street+"\nPostal Code: "+postal+"\nProduct Name: "+product_name+"\nQuantity: "+quantity+" "+unit_value+" \n\nThank you for shopping with us! \nIf you have any questions or need further assistance, feel free to reach out to us.");
         const dynamicPath1 = `https://wa.me/918888371472?text=${message}`;
         ord_button.href = dynamicPath1;
+        
 
         // console.log(dynamicPath1);
         window.open(dynamicPath1, "_blank");
+
     }
 
 }));
 
   
+// Function to set a cookie
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + encodeURIComponent(value) + expires + "; path=/";
+}
+
+// Function to get a cookie
+function getCookie(name) {
+    let nameEQ = name + "=";
+    let cookiesArray = document.cookie.split(';');
+    for (let i = 0; i < cookiesArray.length; i++) {
+        let cookie = cookiesArray[i].trim();
+        if (cookie.indexOf(nameEQ) === 0) {
+            return decodeURIComponent(cookie.substring(nameEQ.length, cookie.length));
+        }
+    }
+    return null;
+}
+
+// Function to save form data to cookies
+function saveFormData() {
+    // console.log("inside onclik")
+    let name = document.getElementById("name").value.trim();
+    let mobile = document.getElementById("mobile").value.trim();
+    let email = document.getElementById("email").value.trim();
+
+    let state = document.getElementById("state").value;
+    let district = document.getElementById("district").value;
+    let city = document.getElementById("city").value.trim();
+    let street = document.getElementById("street").value.trim();
+    let postal = document.getElementById("postal").value.trim();
+
+
+    setCookie("name", name, 7); 
+    setCookie("email", email, 7);
+    setCookie("mobile", mobile, 7);
+    setCookie("state", state, 7);
+    setCookie("district", district, 7);
+    setCookie("city", city, 7);
+    setCookie("street", street, 7);
+    setCookie("postal", postal, 7);
+}
+
+// Function to populate form data from cookies
+function loadFormData() {
+    if (getCookie("name")) document.getElementById("name").value = getCookie("name");
+    if (getCookie("email")) document.getElementById("email").value = getCookie("email");
+    if (getCookie("mobile")) document.getElementById("mobile").value = getCookie("mobile");
+    if (getCookie("state")) document.getElementById("state").value = getCookie("state");
+    if (getCookie("district")) document.getElementById("district").value = getCookie("district");
+    if (getCookie("city")) document.getElementById("city").value = getCookie("city");
+    if (getCookie("street")) document.getElementById("street").value = getCookie("street");
+    if (getCookie("postal")) document.getElementById("postal").value = getCookie("postal");
+}
+
+// Load saved form data when the page loads
+window.onload = function() {
+    loadFormData();
+};
