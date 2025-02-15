@@ -371,6 +371,10 @@ function saveFormData() {
 
 // Function to populate form data from cookies
 function loadFormData() {
+
+    // console.log(getCookie("name"));
+    // console.log("testing")
+
     if (getCookie("name")) document.getElementById("name").value = getCookie("name");
     if (getCookie("email")) document.getElementById("email").value = getCookie("email");
     if (getCookie("mobile")) document.getElementById("mobile").value = getCookie("mobile");
@@ -382,9 +386,13 @@ function loadFormData() {
 }
 
 // Load saved form data when the page loads
-window.onload = function() {
+// window.onload = function() {
+//     loadFormData();
+// };
+
+document.addEventListener("DOMContentLoaded", function() {
     loadFormData();
-};
+});
 
 
 
@@ -496,3 +504,12 @@ window.onload = function() {
 			
 		})
 }
+
+window.onscroll = function () {
+    let element = document.getElementById("home");
+    if (window.scrollY > 100) {
+        element.style.backgroundColor = "black";
+    } else {
+        element.style.backgroundColor = "transparent";
+    }
+};

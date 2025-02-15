@@ -57,9 +57,10 @@ a{
 }
 
 .navbar{
-    background-color: var(--black_color);
+    /* background-color: var(--black_color); */
     /* padding: 25px 0px; */
     z-index: 222222222;
+    transition: all 1s ease-in infinite;
 }
 .nav-link{
     color: var(--white_color);
@@ -70,12 +71,12 @@ a{
 }
 
 .navbar-nav .nav-link.active {
-    /* color: var(--orange_color) !important; */
+    color: var(--orange_color) !important;
     font-weight: bold;
-    background-color: var(--orange_color);
-    color: var(--black_color);
-    border-radius: 20px;
-    padding: 5px 20px;
+    /* background-color: var(--orange_color); */
+    /* color: var(--black_color); */
+    /* border-radius: 20px; */
+    /* padding: 5px 20px; */
 
 }
 
