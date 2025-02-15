@@ -127,9 +127,7 @@ a{
     background-position: center;
     background-repeat: no-repeat;
 }
-#logo_banner{
-    margin-top: 40px;
-}
+
 .carousel-caption {
     top: 50%;
     transform: translateY(-50%);
