@@ -494,3 +494,15 @@ function loadFormData() {
 window.onload = function() {
     loadFormData();
 };
+
+
+function changeBgImage() {
+    let div = document.getElementById("logo_banner");
+    if (window.matchMedia("(max-width: 575px)").matches) {
+        div.style.backgroundImage = "url('images/mobile_banner.png')"; // Image for small screens
+    }else {
+        div.style.backgroundImage = "url('images/banner6.png')"; // Image for large screens
+    }
+}
+changeBgImage();
+window.addEventListener("resize", changeBgImage);
