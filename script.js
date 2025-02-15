@@ -507,7 +507,12 @@ window.onload = function() {
 
 window.onscroll = function () {
     let element = document.getElementById("home");
-    if (window.scrollY > 100) {
+    let screenWidth = window.innerWidth;
+    if(screenWidth <= 991)
+    {
+        element.style.backgroundColor = "black";
+    }
+    else if (window.scrollY > 100) {
         element.style.backgroundColor = "black";
     } else {
         element.style.backgroundColor = "transparent";
