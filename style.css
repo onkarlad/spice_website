@@ -1290,3 +1290,7 @@ hr {
 .modal-body h6{
     font-weight: 600;
 }
+
+.recipe_nav{
+    background-color: black;
+}

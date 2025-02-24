@@ -505,16 +505,18 @@ window.onload = function() {
 		})
 }
 
+
 window.onscroll = function () {
-    let element = document.getElementById("home");
+    let elements = document.getElementsByClassName("home_nav"); // HTMLCollection
     let screenWidth = window.innerWidth;
-    if(screenWidth <= 991)
-    {
-        element.style.backgroundColor = "black";
-    }
-    else if (window.scrollY > 100) {
-        element.style.backgroundColor = "black";
-    } else {
-        element.style.backgroundColor = "transparent";
+
+    for (let i = 0; i < elements.length; i++) {
+        if (screenWidth <= 991) {
+            elements[i].style.backgroundColor = "black";
+        } else if (window.scrollY > 100) {
+            elements[i].style.backgroundColor = "black";
+        } else {
+            elements[i].style.backgroundColor = "transparent";
+        }
     }
 };
