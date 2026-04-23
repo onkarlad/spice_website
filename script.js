@@ -47,19 +47,6 @@ window.addEventListener("load", function () {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const scrollSpeed = 0.2; // 
-    let scrollPos = 0;
-
-    window.addEventListener("wheel", function (event) {
-        event.preventDefault();
-        scrollPos += event.deltaY * scrollSpeed;
-        window.scrollTo({
-            top: scrollPos,
-            behavior: "smooth"
-        });
-    }, { passive: false });
-});
 
 
 document.querySelectorAll(".faq-question").forEach(item => {
