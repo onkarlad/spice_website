@@ -27,7 +27,18 @@ if (scrollPosition > 300) {
 }
 
 
+document.addEventListener("scroll", function () {
+    let targetElement = document.querySelector(".float");
+    let scrollPosition = window.scrollY;
 
+    if (scrollPosition > 300) {
+        targetElement.style.visibility = "visible"; 
+        targetElement.style.opacity = "1";
+    } else {
+        targetElement.style.visibility = "hidden";
+        targetElement.style.opacity = "0";
+    }
+});
 
 
 window.addEventListener("load", function () {
