@@ -48,7 +48,7 @@ window.addEventListener("load", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const scrollSpeed = 0.08; // 
+    const scrollSpeed = 0.2; // 
     let scrollPos = 0;
 
     window.addEventListener("wheel", function (event) {
